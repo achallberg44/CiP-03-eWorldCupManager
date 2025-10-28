@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f6e7ba;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* Root element för React-appen */
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carddiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  max-width: 800px;
+  margin: 2rem auto;
+  gap: 2rem;
+  text-align: center;
+}
+
+.infoText {
+  text-align: center;
+  max-width: 600px;
+}
+
+.card {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Bara för vanliga HTML labels, inte Material-UI */
+.card label:not([class*="Mui"]) {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555;
+}
+
+.card input[type="number"]:not([class*="Mui"]) {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.card input[type="number"]:not([class*="Mui"]):focus {
+  border-color: #4e9cff;
+  box-shadow: 0 0 5px rgba(78, 156, 255, 0.4);
+}
+
+.nav-button {
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  text-transform: none;
+}
+
+.nav-button:hover {
+  opacity: 0.7;
+}
+
+#resultH2 {
+  margin-top: 30px;
+  color: #222;
+  font-size: 1.4rem;
+}
+
+.playersPage {
+  display: flex;
+  justify-content: center;
+}
+
+.players {
+  display: flex;
+  flex-direction: row;
+}
+
+.addDelete {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
