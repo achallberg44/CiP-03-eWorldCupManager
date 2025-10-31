@@ -15,7 +15,6 @@ function App() {
         </p>
 
         <MatchRemaining />
-        <GetOpponent />
       </div>
     </>
   );

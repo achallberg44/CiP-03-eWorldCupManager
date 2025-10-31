@@ -8,6 +8,7 @@ import SpecifikRunda from "./pages/specifikrunda.jsx";
 import ValjSpelare from "./pages/valjSpelare.jsx";
 import VemMoter from "./pages/vemMoter.jsx";
 import Spelare from "./pages/spelare.jsx";
+import HamtaMotstandare from "./pages/hamtaMotstandare.jsx";
 import Layout from "./components/layout.jsx";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
@@ -37,6 +38,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="/valjspelare" element={<ValjSpelare />} />
             <Route path="/vemmoter" element={<VemMoter />} />
             <Route path="/spelarlista" element={<Spelare />} />
+            <Route path="/hamtamotstandare" element={<HamtaMotstandare />} />
           </Routes>
         </Layout>
       </BrowserRouter>

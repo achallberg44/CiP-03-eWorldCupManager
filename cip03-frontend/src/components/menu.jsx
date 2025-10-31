@@ -13,6 +13,7 @@ const navItems = [
   { name: "Spelarlista", path: "/spelarlista" },
   { name: "Välj Spelare", path: "/valjspelare" },
   { name: "Vem möter vem", path: "/vemmoter" },
+  { name: "Hämta Motståndare", path: "/hamtamotstandare" },
 ];
 
 export default function DrawerAppBar() {

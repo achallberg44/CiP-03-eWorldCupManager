@@ -115,12 +115,16 @@ app.get("/player/:i/round/:d", (req, res) => {
       break;
     }
   }
+ ///SNABB DEBUG för att se så id och index av val stämmer
+console.log("DEBUG i =", i);
+console.log("selectedPlayer =", selectedPlayer);
+console.log("allPlayers =", allPlayers.map(p => p.name));
 
-  res.json({
-    player: selectedPlayer.name,
-    round: d,
-    opponent: opponent.name,
-  });
+res.json({
+  player: { id: selectedPlayer.id, name: selectedPlayer.name },
+  round: d,
+  opponent: { id: opponent.id, name: opponent.name },
+});
 });
 
 //GET	/match/remaining?n=&D=
@@ -305,7 +309,6 @@ app.post("/player", (req, res) => {
   };
   allPlayers.push(newPlayer);
 
-  /////////////////////////////////////////////////////////////////////// Skriv till filen
   const filePath = path.join(__dirname, "data", "allPlayers.json");
   const fileContent = JSON.stringify(allPlayers, null, 2);
 

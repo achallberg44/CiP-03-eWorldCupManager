@@ -9,7 +9,6 @@ import ValjSpelare from "../pages/valjSpelare.jsx";
 
 export default function GetOpponent() {
   const [matchResult, setMatchResult] = useState(null);
-  const [i, setI] = useState("");
   const [d, setD] = useState("");
   const [players, setPlayers] = useState(null);
   const [selectedPlayer, setSelectedPlayer] = useState("");
@@ -28,9 +27,9 @@ export default function GetOpponent() {
   };
 
   const calculateWhoMeets = async () => {
-    const i = selectedPlayer - 1;
+
     const response = await fetch(
-      `http://localhost:3000/player/${i}/round/${d}`
+      `http://localhost:3000/player/${selectedPlayer}/round/${d}`
     );
 
     if (!response.ok) {
@@ -70,7 +69,7 @@ export default function GetOpponent() {
                   players.map((player, idx) => (
                     <MenuItem
                       key={idx}
-                      value={player.value || player.id || idx}
+                      value={player.value || idx}
                     >
                      <strong>{player.name}</strong> (ID: {player.id})
                     </MenuItem>
@@ -78,12 +77,12 @@ export default function GetOpponent() {
               </Select>
             </FormControl>
             <label htmlFor="whoMeetsi">(Spelarindex) i:</label>
-            <TextField
+            {/* <TextField
               id="whoMeetsi"
               placeholder="Enter an even number"
               value={i}
               onChange={(e) => setI(e.target.value)}
-            />
+            /> */}
             <br />
             <label htmlFor="whoMeetsD">(Numret på specifik runda) d:</label>
             <TextField
@@ -107,8 +106,8 @@ export default function GetOpponent() {
               return (
                 <div>
                   <h4>
-                    Resultat: {matchResult.player.name} <strong>vs.</strong>{" "}
-                    {matchResult.opponent.name}
+                    Resultat: {matchResult.player.name} (ID: {matchResult.player.id}) <strong>vs.</strong>{" "}
+                    {matchResult.opponent.name} (ID: {matchResult.opponent.id})
                   </h4>
                 </div>
               );
