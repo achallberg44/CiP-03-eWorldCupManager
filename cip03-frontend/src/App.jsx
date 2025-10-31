@@ -1,8 +1,8 @@
 import "./App.css";
 
 import MatchRemaining from "./components/matchRemaining";
-import WhoMeets from "./components/whoMeets";
 // import { getData } from "./components/getData";
+import GetOpponent from "./components/getOpponent";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         </p>
 
         <MatchRemaining />
+        <GetOpponent />
       </div>
     </>
   );
