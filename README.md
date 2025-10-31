@@ -1,3 +1,6 @@
+# Starta projektet
+1. Öppna terminalen i projektet och skriv in "npm install" och tryck enter. Då installeras alla beroenden projektet behöver.
+
 # Starta backend
 
 1. Öppna terminalen och skriv in kommandot "cd cip03-eworldmanager" och tryck enter
