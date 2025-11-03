@@ -195,6 +195,11 @@ app.get("/match", (req, res) => {
     }
   }
 
+   ///SNABB DEBUG för att se så id och index av val stämmer
+console.log("DEBUG i =", i);
+console.log("selectedPlayer =", selectedPlayer);
+console.log("allPlayers =", allPlayers.map(p => p.name));
+
   res.json({
     round: d,
     player: {

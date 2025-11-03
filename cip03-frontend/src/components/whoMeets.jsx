@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import TextField from "@mui/material/TextField";
 import BasicButton from "./basicButton.jsx";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
-import ValjSpelare from "../pages/valjSpelare.jsx";
+// import Select from "@mui/material/Select";
+// import MenuItem from "@mui/material/MenuItem";
+// import FormControl from "@mui/material/FormControl";
+// import InputLabel from "@mui/material/InputLabel";
+// import ValjSpelare from "../pages/valjSpelare.jsx";
 
 export default function WhoMeets() {
   const [matchResult, setMatchResult] = useState(null);

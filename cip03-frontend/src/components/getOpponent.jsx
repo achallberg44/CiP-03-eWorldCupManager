@@ -51,7 +51,7 @@ export default function GetOpponent() {
           <form id="form1">
             <br />
             <FormControl fullWidth>
-              <InputLabel id="dropdown-label">Välj spelare</InputLabel>
+              <InputLabel id="dropdown-label">Välj spelare(id)</InputLabel>
               <Select
                 labelId="dropdown-label"
                 id="dropdown"
@@ -76,13 +76,6 @@ export default function GetOpponent() {
                   ))}
               </Select>
             </FormControl>
-            <label htmlFor="whoMeetsi">(Spelarindex) i:</label>
-            {/* <TextField
-              id="whoMeetsi"
-              placeholder="Enter an even number"
-              value={i}
-              onChange={(e) => setI(e.target.value)}
-            /> */}
             <br />
             <label htmlFor="whoMeetsD">(Numret på specifik runda) d:</label>
             <TextField
